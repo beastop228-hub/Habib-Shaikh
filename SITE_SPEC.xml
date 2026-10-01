@@ -1,0 +1,171 @@
+<master_prompt>
+  <core_role>
+    Senior Creative Frontend Engineer &amp; AI Web Architect specializing in dark-mode, bento-grid personal portfolio platforms with high-polish micro-interactions and smooth scroll ergonomics.
+  </core_role>
+
+  <design_and_ux_principles>
+    <intentional_design>
+      Layout: Split desktop layout featuring a persistent, sticky identity sidebar on the left and a continuous, section-based scrollable showcase feed on the right, collapsing into a clean single-column stacked layout on mobile devices.
+      Container framing: max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 gap-8
+      Colors:
+        - Background: #0B0C10
+        - Surface / Cards: #13141C
+        - Surface Secondary: #1A1C26
+        - Borders: #222533
+        - Primary Accent: #7C3AED
+        - Accent Glow: #A855F7
+        - Success Accent: #10B981
+        - Text Primary: #F9FAFB
+        - Text Secondary: #9CA3AF
+        - Text Muted: #6B7280
+      Typography:
+        - Headline Font: Plus Jakarta Sans, weights 600/700/800, tracking-tight
+        - Body Font: Inter, weights 400/500, line-height 1.6
+        - Monospace Font: JetBrains Mono (for tech tags and metrics)
+        - Type scale: 12/14/16/18/20/24/32/44/56
+    </intentional_design>
+
+    <customer_journey>
+      Hero Hook (Instant role and presence with sticky card) -> Visual Proof (Featured dynamic projects grid) -> Metrics &amp; About (Experience and ethos) -> Capabilities &amp; Services -> Technical Arsenal (Skills &amp; Tools) -> Career &amp; Education Journey -> Social Proof (Client testimonials) -> High-conversion Contact Channel.
+    </customer_journey>
+
+    <visual_storytelling>
+      Deep-space dark theme with ambient radial violet/indigo background blurs, subtle noise texture, crisp borders with 1px border glow highlights, frosted glassmorphism elements (backdrop-blur-md), and an interactive status indicator.
+    </visual_storytelling>
+
+    <copywriting>
+      Sidebar Name: "Habib Shaikh"
+      Sidebar Role: "AI Web Builder &amp; Digital Product Creator"
+      Sidebar Location: "Mumbai, Maharashtra, India"
+      Sidebar Status: "Available for Freelance &amp; Open to Work"
+      Hero Tagline: "Turning ambitious ideas into scalable, AI-powered web experiences."
+      Hero Subheadline: "Bridging modern web engineering and autonomous AI workflows to build rapid, high-performance digital products from Mumbai to the world."
+      Hero CTA: "Let's Talk Together"
+      Secondary CTA: "Explore Projects"
+    </copywriting>
+
+    <custom_assets>
+      Avatar: 3D Claw Machine Character (placed in /public/avatar.png)
+      Icons: lucide-react (Github, Linkedin, Twitter, Mail, ArrowUpRight, Code, Sparkles, Terminal, Layers, ExternalLink)
+      Badges: Status dot pulsating with Emerald-500
+    </custom_assets>
+
+    <meaningful_interactions>
+      Smooth in-page anchor navigation with active-tab highlight tracking, card hover elevations with subtle border illumination, interactive theme toggle placeholder, and smooth expand states on portfolio items.
+    </meaningful_interactions>
+
+    <conversion_logic>
+      Persistent "Let's Talk Together" CTA pinned in the left sidebar card, paired with an inline frictionless message form and direct mail triggers at the bottom of the feed.
+    </conversion_logic>
+  </design_and_ux_principles>
+
+  <content_and_data_architecture>
+    <content_source>
+      Typed static TypeScript configuration objects within src/data/portfolio-data.ts to allow instant personalization and clean code modularity.
+    </content_source>
+    <data_fetching_strategy>
+      Static Site Generation (SSG) via Next.js App Router for zero-latency load times and optimal Core Web Vitals.
+    </data_fetching_strategy>
+  </content_and_data_architecture>
+
+  <backend_integrations_and_auth>
+    <authentication>
+      N/A — Public portfolio platform.
+    </authentication>
+    <database_and_storage>
+      N/A — Client-side static rendering with optional API route hook for contact form forwarding.
+    </database_and_storage>
+    <third_party_services>
+      Email routing via Resend / Formspree or direct mailto action trigger.
+    </third_party_services>
+    <form_submission_handling>
+      Next.js Route Handler (/api/contact) with Zod validation, returning immediate UI success state.
+    </form_submission_handling>
+  </backend_integrations_and_auth>
+
+  <analytics_and_tracking>
+    <tooling>
+      Vercel Analytics / Privacy-friendly minimalist tracking.
+    </tooling>
+    <key_events_tracked>
+      Resume download click, project outbound link clicks, contact form submission.
+    </key_events_tracked>
+  </analytics_and_tracking>
+
+  <seo_and_content_structure>
+    <semantic_hierarchy>
+      Single H1 tag for the primary hero introduce statement, semantic H2 sections for Projects, About, Services, Experience, and Contact, encapsulated within semantic aside and main landmarks.
+    </semantic_hierarchy>
+    <metadata>
+      Title: "Habib Shaikh | AI Web Builder &amp; Digital Product Creator"
+      Description: "Portfolio of Habib Shaikh — Building next-generation web platforms and digital experiences with AI workflows in Mumbai, India."
+      OG Type: "website"
+    </metadata>
+    <performance_seo>
+      Target 100/100 Lighthouse performance, sub-second LCP using optimized next/image priority loading for avatar.
+    </performance_seo>
+    <routing_and_information_architecture>
+      Single-page progressive layout (/) with anchor points (#home, #portfolio, #about, #resume, #contact).
+    </routing_and_information_architecture>
+  </seo_and_content_structure>
+
+  <technical_and_accessibility_specifications>
+    <stack_standards>
+      Next.js 14+ (App Router), TypeScript, Tailwind CSS, lucide-react, clsx, tailwind-merge.
+    </stack_standards>
+    <component_architecture_and_state>
+      src/
+        components/
+          sidebar/ (ProfileCard, NavigationPills, SocialLinks)
+          sections/ (HeroSection, ProjectsGrid, ServicesList, ExperienceTimeline, ContactForm)
+          ui/ (Badge, Button, Card, GlowEffect)
+        data/ (portfolio-data.ts)
+    </component_architecture_and_state>
+    <responsive_breakpoints>
+      Desktop (&gt;1024px): 2-column layout (w-80 sidebar fixed/sticky, flex-1 scrollable main container).
+      Mobile/Tablet (&lt;1024px): Single-column stack with sticky top mini-bar or stacked card.
+    </responsive_breakpoints>
+    <accessibility_wcag>
+      WCAG 2.1 AA compliant. Focus rings on interactive elements, descriptive ARIA attributes for all icon-only anchors, semantic landmarks.
+    </accessibility_wcag>
+    <performance_optimization>
+      Unoptimized SVG icons inline, next/image with explicit aspect ratios, zero external runtime CSS overhead.
+    </performance_optimization>
+    <form_state>
+      Controlled inputs with immediate UI state feedback (idle, loading, success, error).
+    </form_state>
+    <security_and_data_handling>
+      Strict sanitization on contact fields, no client-side API secret exposure.
+    </security_and_data_handling>
+    <i18n_and_localization>
+      English (en-US).
+    </i18n_and_localization>
+    <deployment_and_environment>
+      Vercel / Cloudflare Pages ready.
+    </deployment_and_environment>
+  </technical_and_accessibility_specifications>
+
+  <legal_and_compliance>
+    <data_collection_disclosure>
+      Standard personal data handling notice on contact form submit.
+    </data_collection_disclosure>
+  </legal_and_compliance>
+
+  <project_context>
+    <brand_identity>
+      - Name: Habib Shaikh
+      - Role: AI Web Builder &amp; Digital Product Creator
+      - Location: Mumbai, Maharashtra, India
+      - Theme: Cyberpunk Bento Dark / Minimal Studio
+    </brand_identity>
+
+    <business_goal>
+      - Showcase high-impact web engineering and AI application projects to land freelance clients, high-growth remote contracts, and engineering collaborations.
+    </business_goal>
+
+    <scope_and_pages>
+      - Required Route: Single Page Application (/) with smooth anchors (#home, #portfolio, #about, #services, #resume, #contact).
+      - Deliverable Requested: Complete Next.js App Router codebase matching the reference layout aesthetics.
+    </scope_and_pages>
+  </project_context>
+</master_prompt>
